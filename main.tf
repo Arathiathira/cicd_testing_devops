@@ -21,7 +21,7 @@ resource "azurerm_resource_group" "dev1" {
   location = "West Europe"
 }
 resource "azurerm_app_service_plan" "dev1" {
-  name                = "appserviceplan_ars"
+  name                = "appserviceplanars"
   location            = "${azurerm_resource_group.dev1.location}"
   resource_group_name = "${azurerm_resource_group.dev1.name}"
 
@@ -32,7 +32,7 @@ resource "azurerm_app_service_plan" "dev1" {
 }
 
 resource "azurerm_app_service" "dev1" {
-  name                = "appservicename_ars"
+  name                = "appservicenamears"
   location            = "${azurerm_resource_group.dev1.location}"
   resource_group_name = "${azurerm_resource_group.dev1.name}"
   app_service_plan_id = "${azurerm_app_service_plan.dev1.id}"
