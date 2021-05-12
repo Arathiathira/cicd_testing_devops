@@ -17,7 +17,7 @@ terraform {
 features {}
 }
 resource "azurerm_resource_group" "dev1" {
-  name     = "Terraform_ars"
+  name     = "Terraform_ars"    #created for app service and app service plan.. for storage of tf state file another resource group is used
   location = "West Europe"
 }
 resource "azurerm_app_service_plan" "dev1" {
