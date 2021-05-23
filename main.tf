@@ -1,10 +1,10 @@
 
 
  
-terraform {
+terraform {                                     
   required_version = ">= 0.11" 
  backend "azurerm" {
- storage_account_name = "__terraformstorageaccount__"
+ storage_account_name = "__terraformstorageaccount__" 
      container_name       = "terraform3"
      key                  = "terraform.tfstate"
 	access_key  ="aqS4vrWX4EF29VbI9XH/WEYrs/QNNJhPZF9CRod8D8JrG+Bcy0OTGL++7FHuLJV+jbQON60RKBuc56vW2hEqvA=="
@@ -16,7 +16,7 @@ terraform {
     version = "=2.0.0"
 features {}
 }
-resource "azurerm_resource_group" "dev1" {
+resource "azurerm_resource_group" "dev1" {                               //resource group
   name     = "Terraform_ars"    #created for app service and app service plan.. for storage of tf state file another resource group is used
   location = "West Europe"
 }
