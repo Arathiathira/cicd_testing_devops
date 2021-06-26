@@ -19,7 +19,7 @@ steps:
   displayName: 'Run a multi-line script'
 - task: CopyFiles@2
   inputs:
-    TargetFolder: ': $(build.artifactstagingdirectory)'
+    TargetFolder: ': $(build.artifactstagingdirectory)'       // error as ':' got in between
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
